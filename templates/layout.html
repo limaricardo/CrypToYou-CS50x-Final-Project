@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="/static/styles.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+    </style>
+    <title>CrypToYou: {% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><p class="CrypToYou login-cryp">CrypToYou</p></a>
+        <div class="collapse-resp collapse navbar-collapse" id="navbarNav">
+            {% if session.user_id %}
+                <ul class="navbar-nav nav-crypto">
+                    <li class="nav-item"><a class="nav-link" href="/">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/calculator">Impermanent Loss Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/trade">Trade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/addFunds">Add Funds</a></li>
+                </ul>
+                <ul class="navbar-nav log-out">
+                    <li class="nav-item"><a class="nav-link logout" href="/logout">Log Out</a></li>
+                </ul>
+            {% else %}
+                <ul class="navbar-nav nav-crypto">
+                    <li class="nav-item"><a class="nav-link" href="/login">Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Quote</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/calculator">Impermanent Loss Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Trade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login">Add Funds</a></li>
+                </ul>
+                <ul class="navbar-nav navbar-sign">
+                    <li class="nav-item"><a class="nav-link login-out login-init" href="/login">Sign in</a></li>
+                    <li class="nav-item"><a class="nav-link register-init" href="/register">Register</a></li>
+                </ul>
+            {% endif %} 
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block main %}{% endblock %}
+    </main>
+    
+    <footer>
+        Data provided for free by CoinMarketCap.
+    </footer>
+    <script src="{{url_for('static', filename='calculator.js')}}"></script>
+</body>
+</html>

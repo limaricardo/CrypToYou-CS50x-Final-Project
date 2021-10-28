@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="login-container register-container">
+        <header>
+            <p class="logo-login logo-register">Register</p>
+        </header>
+        <div class="line-register"></div>
+        <form action="/register" method="post">
+            <div class="erro erro-register">
+                {{ error }}
+            </div>
+            <div class="form-container form-register">
+                <p class="p-username">Username</p>
+                <div class="form-group username-input-div username-register">
+                    <input class="username-input input-register" autocomplete="off" autofocus class="form-c" name="username" placeholder="Username" type="text">
+                </div>
+                <p class="p-password">Password</p>
+                <div class="form-group password-input-div">
+                    <input class="password-input password-register input-register" autocomplete="off" class="form-c" name="password" placeholder="Password" type="password" minlength="4" maxlength="8">
+                </div>
+                <p class="p-password confirmation">Confirm Password</p>
+                <div class="form-group">
+                    <input class="password-input input-register" autocomplete="off" class="form-c" name="confirmation" placeholder="Confirm Password" type="password">
+                </div>
+                <button class="btn btn-login" style="color: lightslategray;" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+    
+{% endblock %}

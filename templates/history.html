@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="border-history">
+        <h1>History of transactions</h1>
+        <table class="table-history">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Transacted</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in history_transac %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ "{:,.4f}".format(row[4]) }}</td>
+                        <td>{{ row[1].strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

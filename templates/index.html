@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="border-history wallet border-history-wallet tbl">
+        <h1>Crypto Wallet</h1>
+        <table class="table-wallet table-history">
+            <thead>
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Price($USD)</th>
+                    <th scope="col">Total($USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in crypto_db %}
+                    <tr>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ "{:,.2f}".format(row[3]) }}</td>
+                        <td>{{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr class="total">
+                    <td class="cash">CASH</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td  class="cash">{{ "{:,.2f}".format(cash[0]) }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+{% endblock %}

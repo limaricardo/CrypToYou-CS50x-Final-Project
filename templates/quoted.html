@@ -1,0 +1,52 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+    Quoted
+{% endblock %} 
+
+{% block main %} 
+    <table class="table-quoted">
+        <thead>
+            <tr class="row-th">
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Total Supply</th>
+                <th>Max Supply</th>
+                <th>Rank</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-td">
+                <td>{{ result.name }}</td>
+                <td>{{ result.symbol }}</td>
+                <td>{{ result.total_supply }}</td>
+                <td>{{ result.max_supply }}</td>
+                <td>{{ result.cmc_rank }}</td>
+                <td>{{ "{:,.4f}".format(result.price) }} USD</td>
+                <td>{{ result.market_cap}} USD</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="table-legend">
+        <div class="total_supply">
+            <b>Total Supply</b> is the total amount of coins in existence right now (minus any coins that have been verifiably burned).
+        </div>
+        <div class="max_supply">
+            <b>Max Supply</b> is the best approximation of the maximum amount of coins that will ever exist in the lifetime of the cryptocurrency.
+        </div>
+        <div class="rank">
+            <b>Rank</b> is the relative position a cryptocurrency occupies in the market. Usually, the rank of a digital currency is evaluated by its market capitalization.
+        </div>
+        <div class="price">
+            <b>Price</b> is the current price of the crypto being traded.
+        </div>
+        <div class="market_cap">
+            <b>Market Capitalization</b> is one way to rank the relative size of a cryptocurrency. It's calculated by multiplying the Price by the Circulating Supply.
+            <br><b>Market Cap</b> = Price X Circulating Supply(Total Supply).
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,1053 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body{
+    background-color: rgb(220, 247, 253);
+}
+
+main {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    height: 6vh;
+    border-bottom: solid rgb(231, 227, 235);
+}
+
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 42%;
+    vertical-align: middle;
+}
+
+.bg-light {
+    background-color: white!important;
+}
+
+.navbar-sign, .log-out {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+ul {
+    width: 100%;
+}
+
+.erro {
+    color: rgb(233, 12, 12);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.erro-login {
+    text-align: center;
+    color: rgb(250, 201, 40);
+    margin-top: 40px;
+}
+
+.erro-register {
+    text-align: center;
+    color: rgb(250, 201, 40);
+    margin-bottom: 30px;
+}
+
+/* Table quoted */
+
+.table-quoted {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.table-quoted thead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #7f0eca;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.table-quoted tr {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-collapse: collapse;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.table-quoted .row-td {
+    background-color: rgb(255, 255, 255);
+}
+
+.table-quoted th {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 24px;
+    font-size: 17px;
+}
+
+.table-quoted td {
+    display: flex;
+    justify-content: center;
+    width: 175px;
+}
+
+.table-legend {
+    background-color: white;
+    border: none;
+}
+
+/* Table history */
+
+.border-history {
+    background-color: white;
+    height: 625px;
+    border: none!important;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(153, 57, 153);
+}
+
+.table-history {
+    width: 100%;
+}
+
+.table-history tbody, .table-history thead {
+    display: block;
+}
+
+.table-history tbody {
+    overflow: auto;
+    height: 500px;
+}
+
+.table-history tbody tr td:last-child{
+    text-align: initial;
+}
+
+.table-history tbody tr:nth-child(odd)
+{
+  background: rgb(240, 239, 243)!important;
+}
+
+.table-history thead {
+    background-color: #7f0eca;
+    color: white;
+    font-weight: bold;
+}
+
+.table-history th, td {
+    width: 350px;
+}
+
+.table-history thead tr th:first-child, .table-history tbody tr td:first-child {
+    padding-left: 10px;
+}
+
+.border-history {
+    border: 1px solid white;
+    width: 100%;
+}
+
+.table-history tbody::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: white;
+	border-radius: 10px;
+}
+
+.table-history tbody::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: white;
+}
+
+.table-history tbody::-webkit-scrollbar-thumb
+{   
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, #aa37f6),
+									   color-stop(0.72, #9c30e4),
+									   color-stop(0.86, #7f0eca));
+    border-radius: 10px;
+}
+
+/* Wallet */
+
+.wallet > h1, .border-history > h1 {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    color: rgb(83, 82, 82)
+}
+
+.table-wallet {
+    width: 100%;
+}
+
+.tbl {
+    position: relative;
+}
+
+
+.table-wallet tbody {
+    overflow: auto;
+    height: 480px;
+}
+
+.table-wallet thead {
+    background-color: #7f0eca;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px!important;
+}
+
+
+.table-wallet tfoot {
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(220, 247, 253);
+    color: black;
+    font-weight: bolder;
+    height: 33px;
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
+.table-wallet tfoot tr td:first-child {
+    padding-left: 10px;
+}
+
+.table-wallet thead tr th:first-child, .table-wallet tbody tr td:first-child {
+    padding-left: 10px;
+}
+
+.table-wallet tbody::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: white;
+	border-radius: 10px;
+}
+
+.table-wallet tbody::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: white;
+}
+
+.table-wallet tbody::-webkit-scrollbar-thumb
+{   
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, #aa37f6),
+									   color-stop(0.72, #9c30e4),
+									   color-stop(0.86, #7f0eca));
+    border-radius: 10px;
+}
+
+
+/* NAVBAR */
+
+.nav-link {
+    color: rgb(122, 110, 170)!important;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    align-items: center!important;
+}
+
+.login-out {
+    background-color: rgb(31, 199, 212);
+    color: white!important;
+    border-radius: 16px;
+    margin-right: 5px;
+    max-height: 80%;
+}
+
+.table-legend {
+    border: 1px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 4;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}
+
+/* Login container */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    width: 485px;
+    padding: 20px 80px;
+    border-radius: 25px;
+    background-color: rgb(122, 110, 170);
+    height: 70vh;
+    justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.username-input-div {
+    padding-bottom: 20px;
+}
+
+.username-input, .password-input {
+    border-radius: 5px;
+    border: none;
+}
+
+input:focus {
+    outline: none!important;
+    border: 1px solid purple;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+input::placeholder {
+    padding-left: 1px;
+}
+
+.form-container > p {
+    margin-bottom: 1px;
+    width: fit-content;
+    font-size: 1.2rem;
+    color: #f8f8f8;
+    font-weight: bold;
+
+}
+
+.username-input, .password-input {
+    background-color: #e7e7e7;
+    text-indent: 10px;
+    height: 30px;
+}
+
+.btn-login {
+    border-radius: 15px;
+    background-color: #e7e7e7;
+    margin-top: 35px;
+    font-size: 1.3rem;
+    color: rgb(122, 110, 170);
+}
+
+.form-container > p.register-text {
+    margin-top: 70px;
+    font-size: 1.1rem;
+}
+
+a.register-link{
+    color: #f8f8f8;;
+}
+
+a.register-link:visited {
+    color: #e9ac3b;
+}
+
+a.register-link:hover {
+    filter: brightness(1.5);
+}
+
+.line-login {
+    width: auto;
+    background-color: rgb(220, 247, 253);
+    height: 2px;
+    margin: 35px -80px 0px -80px;
+}
+
+.logo-login {
+    font-size: 70px;
+    color: white;
+    font-weight: bolder;
+    width: fit-content;
+    margin: 0px;
+    padding-left: 25px;
+}
+
+.CrypToYou {
+    color: rgb(122, 110, 170);
+    font-size: 1.6rem;
+    margin: 0px 0px 0px 20px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+/* Register */ 
+
+.register-container {
+    background-color: lightslategray;
+}
+
+.form-register {
+    margin-top: 1px;
+}
+
+.confirmation {
+    margin-top: 10px;
+}
+
+.username-register {
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+.logo-register {
+    font-size: 70px;
+    color: white;
+    font-weight: bolder;
+    width: fit-content;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+
+input.input-register:focus {
+    outline: none!important;
+    border: 1px solid rgb(54, 72, 88);
+    box-shadow: 0 0 10px #1a2938;
+}
+
+.line-register {
+    width: auto;
+    background-color: rgb(220, 247, 253);
+    height: 2px;
+    margin: 1px -80px 60px -80px;
+}
+
+/* Quote */
+
+.container-quote {
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgb(153 57 153);
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    height: 300px;
+}
+
+.input-quote::placeholder {
+    padding-left: 5px;
+}
+
+.form-quote {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.input-quote {
+    border-radius: 30px;
+    width: 100%;
+    height: 40px;
+    text-indent: 10px;
+    border: none;
+    box-shadow: 0 0 5px rgb(153 57 153);
+    margin-top: 80px;
+}
+
+.input-quote:focus {
+    box-shadow: 0 0 5px rgb(29, 124, 202);
+}
+
+.btn-quote {
+    position: absolute;
+    right: 5px;
+    top: 85px;
+    border-radius: 30px;
+    border-collapse: collapse;
+    height: 30px;
+    background-color: rgb(233, 232, 232);
+    border: none;
+}
+
+.btn-quote:hover {
+    background-color: rgb(202, 199, 202);
+}
+
+.btn-quote > a {
+    width: 100%;
+}
+
+.btn-quote > a > img {
+    margin-bottom: 7px;
+    
+}
+
+/* Trade */ 
+
+.trade-container {
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(153, 57, 153);
+}
+
+.trade-container > header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.trade-container > header > h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(83, 82, 82)
+}
+
+.trade-container > header > p {
+    margin-top: 50px;
+}
+
+.trade-container > .footer > p {
+    margin-top: 30px;
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+.trade-container a {
+    text-decoration: none!important;
+    color: black;
+}
+
+.trade-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px;
+}
+
+.input-trade {
+    border: 1px solid rgb(122, 110, 170);
+    border-radius: 5px;
+    text-indent: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-trade-buy {
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.btn-trade-sell {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.erro-trade {
+    font-weight: bolder;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Add Funds */
+
+.funds-container {
+    height: 450px;
+}
+
+.funds-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(83, 82, 82)
+}
+
+.form-funds {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.div-input-funds {
+    margin: 30px 20px 20px 20px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 150px;
+}
+
+.input-funds {
+    border-radius: 5px;
+    text-indent: 5px;
+    border: 1px solid rgb(122, 110, 170);
+    height: 40px;
+}
+
+.form-funds { 
+    text-align: center;
+}
+
+.btn-funds {
+    background-color: rgb(133, 102, 173);
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    margin: 20px 80px;
+    
+}
+
+.btn-funds:hover {
+    background-color: #7f0eca;
+}
+
+/* Calculator */
+
+.container-calculator {
+    box-shadow: 0 0 10px rgb(153 57 153);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    position: relative;
+    height: 400px;
+    background-color: white;
+    margin-bottom: 21%;
+}
+
+.show-calculation {
+    margin-top: 40px;
+    position: absolute;
+    left: -200px;
+    width: 900px;
+    height: 370px;
+}
+
+.show-calculation h2 {
+    font-size: 25spx;
+}
+
+.container-calculator h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(83, 82, 82);
+}
+
+.container-calculator .percent {
+    font-size: 40px;
+    color: rgb(87, 66, 128);;
+    font-weight: bold;
+}
+
+.percent-parent {
+    display: flex;
+}
+
+.container-calculator form {
+    height: 200px;
+    padding: 15px 0;
+}
+
+.container-calculator form p {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(83, 82, 82);
+}
+
+.container-calculator form .col-1-calc {
+    width: 60%
+}
+
+.container-calculator form .col-2-calc {
+    margin-right: 10px;
+}
+
+.container-calculator form  div  input {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-indent: 5px;
+    width: 80%;
+    border: 1px solid rgb(122, 110, 170);
+}
+
+.container-calculator form  div  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container-calculator form .pc1 {
+    position: relative;
+    display: flex;
+}
+
+.container-calculator form .pc1 .pc-perc{
+    position: absolute;
+    right: 25%;
+}
+
+.erro-calc {
+    font-size: 15px;
+}
+
+.calculation {
+    display: flex;
+}
+
+.btn-calc {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    width: 100%;
+}
+
+.btn-calc button{
+    border-radius: 10px;
+    background-color: rgb(133, 102, 173);
+    width: 80%;
+    height: 40px;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+
+@media only screen and (max-width: 768px) and (min-width: 200px){
+
+/* Nav Bar */
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+nav {
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logout {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    background-color: rgb(225, 180, 251);
+    color: white!important;
+}
+    
+
+
+.CrypToYou {
+    position: absolute;
+    left: 30%;
+}
+
+.collapse-resp {
+    display: flex!important;
+    flex-wrap: wrap!important;
+    position: relative;
+    top: 20px;
+}
+
+.collapse-resp ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.collapse-resp ul li a {
+    padding: 2px!important;
+}
+
+.nav-link {
+    font-size: 11px;
+    padding-right: 5px;
+    padding: 1px 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(153 57 153);
+}
+
+.nav-link > a {
+    padding: 2px;
+}
+
+.login-out {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.login-out a {
+    padding-right: 2px;
+}
+
+.wallet h1 {
+    font-size: 50px;
+}
+
+/* Wallet */
+
+main {
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+}    
+
+.tbl {
+    min-height: 90%;
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.table-wallet {
+    font-size: 12px;
+}
+
+.table-wallet tbody {
+    overflow: auto;
+    height: 335px!important;
+    text-align: center;
+}
+
+.table-wallet thead {
+    text-align: center;
+    font-size: 13px;
+}
+
+.table-wallet tbody tr td {
+    width: 75px;
+}
+
+.table-wallet tbody tr td:last-child {
+    text-align: center;
+}
+
+.table-wallet tfoot {
+    height: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 11%;
+}
+
+/* Trade */
+
+.trade-container {
+    width: 90%;
+    height: 90%;
+}
+
+.trade-container header {
+    margin-top: 5px;
+}
+
+.trade-container header h1 {
+    margin: 0px;
+    font-size: 1.6rem!important;
+}
+
+.trade-container .footer {
+    margin-top: 0px;
+}
+
+.trade-form .input-form input {
+    width: 90px;
+}
+
+/* Calculator */
+
+.container-calculator {
+    height: 100%;
+    width: 100%;
+    margin-top: 30%;
+}
+
+.col-1-calc {
+    width: 145px;
+}
+
+.col-1-calc p {
+    width: 95px;
+}
+
+.col-2-calc p{
+    width: 105px;
+}
+
+.show-calculation {
+    width: 0px;
+}
+
+/* History */ 
+
+.border-history {
+    height: 90%;
+    width: 93%;
+}
+
+.border-history h1 {
+    font-size: 1.6rem;
+}
+
+.border-history thead {
+    padding-left: 5px!important;
+}
+
+.table-history tbody {
+    height: 335px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Funds */
+
+.funds-container {
+    height: 70%;
+}
+
+.form-funds {
+    margin-top: 0px;
+}
+
+/* Login */ 
+
+main .login-container {
+    width: 80vw;
+    height: 70vh;
+    text-align: center;
+    padding: 0;
+}
+
+.form-container {
+    margin-top: 10%;
+}
+
+.login-container header {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.login-container header p, 
+.register-container header p {
+    font-size: 1.8rem;
+    padding: 0;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.logo-register {
+    margin: 8% 0px!important;
+}
+
+.line-register {
+    margin-bottom: 5%;
+}
+
+.login-container form {
+    height: 100%;
+}
+
+.login-container form .register-text {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.login-out {
+    margin: 0;
+    position: fixed;
+    left: 30%;
+    top: 8%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #3be9db;
+}
+
+.login-out,
+.register-init{
+    padding: 0px!important;
+}
+
+.register-init {
+    margin: 0;
+    position: fixed;
+    left: 60%;
+    top: 8%;
+}
+
+
+.nav-item .login-init, 
+.nav-item .register-init {
+    padding-top: 4px!important;
+}
+
+.login-cryp {
+    font-size: 35px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+}
+
+.table-quoted {
+    display: flex;
+    flex-direction: revert;
+    text-align: center;
+    margin: 0px;
+}
+
+
+.table-quoted tr > * {
+    display: block;
+}
+
+.table-quoted tr {
+    display: table-cell;
+}
+
+.table-legend {
+    display: none;
+}
+
+}
+
+

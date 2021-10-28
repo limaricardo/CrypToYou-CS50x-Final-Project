@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calculator
+{% endblock %}
+
+{% block main %}
+      <container class="container-calculator">
+        <p>Calculator inspired by <a href="https://baller.netlify.app/" target="_blank" style="text-decoration: none; color: indigo;" >https://baller.netlify.app/ </a><br>
+          Made by oaksprout in support of Balancer</p>
+        <div class="erro erro-calc">
+          {{ error }}
+      </div>
+        <h3>Impermanent Loss</h3>
+        <div class="percent-parent">
+          <div id="impermanentLoss" class="percent">{{ impermanentLoss }}</div>
+          <div class="percent percent-imp">%</div>
+        </div>
+        <form class="calculation" action="/calculator" method="post">
+          <div class="col-1-calc">
+            <p class="asset">Asset</p>
+            <input placeholder="ETH" type="text" />
+            <input placeholder="BTC" type="text" />
+          </div>
+          <div class="col-2-calc">
+            <p class="price-change">Price Change</p>
+            <div class="pc1">
+              <input id="priceChange1" name="priceChange1" type="text" value="0" max="100000000" maxlength="8" onkeyup="calculator()" />
+              <div class="pc-perc">%</div>
+            </div>
+            <div class="pc1">
+              <input id="priceChange2" name="priceChange2" type="text" value="0" max="100000000" maxlength="8" onkeyup="calculator()" />
+              <div class="pc-perc">%</div>
+            </div>
+          </div>
+          <div class="col-3-calc">
+            <p class="pool-weight">Pool Weight</p>
+            <div class="pc1">
+              <input id="poolWeight1" name="poolWeight1" type="text" value="0" max="100000000" maxlength="3" onkeyup="calculator()" />
+              <div class="pc-perc">%</div>
+            </div>
+            <div class="pc1">
+              <input id="poolWeight2" name="poolWeight2" type="text" value="0" max="100000000" maxlength="3" onkeyup="calculator()" />
+              <div class="pc-perc">%</div>
+            </div>
+          </div>
+          <div class="btn-calc">
+            <button type="submit">Reset Input</button>
+          </div>
+        </form>
+        <div class="show-calculation container-calculator">
+          <h2>
+            Calculating Impermanent Loss
+          </h2>
+          <p>
+            <b>Impermanent Loss</b> = Value of Pool / Asset Value if Held - 1
+            <br>
+          </p>
+          <h2>
+            Calculating Value of Pool
+          </h2>
+          <p>
+            To get the Pool Value, take each asset, put its weight divided by hundred to the power of the price change. Then multiply all these.
+          </p>
+          <p>
+            <b>Value of Pool</b> = (Price Change1 ^ (Asset Weight1 / 100)) * (Price Change2 ^ (Asset Weight2 / 100))
+            <br>
+          </p>
+          <h2>
+            Calculating Asset Value If Held
+          </h2>
+          <p>
+            To get the Hold Value, take each asset, and multiply its price change by its weight, then divide by 100. Then add all these up.
+          </p>
+          <p>
+            <b>Value If Held</b> = (Price Change1 * (Asset Weight1 / 100)) + (Price Change2 * (Asset Weight2 / 100))
+            <br>
+          </p>
+        </div>
+      </container>
+{% endblock %}

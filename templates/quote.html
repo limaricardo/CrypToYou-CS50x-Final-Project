@@ -1,0 +1,21 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+    Quote
+{% endblock %} 
+
+{% block main %} 
+    <div class="container-quote">
+        <div>
+            <h2>Cryptocurrency</h2>
+            <h1>Search for Crypto</h1>
+            <div class="erro">
+                {{ error }}
+            </div>
+        </div>
+        <form class="form-quote" action="/quote" method="POST">
+                <input class="input-quote" type="text" name="symbol" autofocus placeholder="Symbol">
+                <button class="btn btn-primary btn-quote" type="submit"><a href="/quoted"><img src="../static/search.png" style="width: 15px; height: 15px;" alt="Search Button"></a></button>
+        </form>
+    </div>
+{% endblock %}

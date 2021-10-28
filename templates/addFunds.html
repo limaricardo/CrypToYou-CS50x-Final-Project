@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <div class="trade-container funds-container">
+        <header>
+            <h1>Add Funds</h1>
+            <p>To add funds you just need to input a positive number and click on the button "Add Funds" below.</p>
+        </header>
+        <form class="form-funds" action="/addFunds" method="post">
+            <div class="erro">
+                {{ error }}
+            </div>
+            <div class="form-group div-input-funds">
+                <input autocomplete="off" autofocus class="input-funds" name="funds" placeholder="Amount" type="number" max="100000000" min="1">
+            </div>
+            <button class="btn btn-primary btn-funds" type="submit">Add Funds</button>
+        </form>
+    </div>
+{% endblock %}

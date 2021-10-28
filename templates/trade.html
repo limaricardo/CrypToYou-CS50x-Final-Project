@@ -1,0 +1,32 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+    Buy 
+{% endblock %} 
+
+{% block main %} 
+    <div class="trade-container">
+        <header>
+            <h1>Trade simulator</h1>
+            <p>Here you can simulate trades with price update in real time.</p>
+        </header>
+        <form class="trade-form" action="/trade" method="POST">
+            <div class="erro erro-trade">
+                {{ error }}
+            </div>
+            <div class="input-form">
+                <input autocomplete="off" autofocus class="input-trade" type="text" name="symbol"  placeholder="Symbol">
+                <input autocomplete="off" autofocus class="input-trade" type="number" name="shares"  placeholder="Shares">
+            </div>
+            <div class="btn-trade">
+                <button class="btn btn-primary btn-trade-buy" type="submit" name="action" value="Buy">Buy</button>
+                <button class="btn btn-primary btn-trade-sell" type="submit" name="action" value="Sell">Sell</button>        
+            </div>
+        </form>
+        <div class="footer">
+            <p>Check if you have enough cash to <b><a href="/" style="color: green;">BUY</a></b> or enough Crypto to <b><a href="/" style="color: red;">SELL</a></b>. <br>If you experience some error of those kind, you can access in 
+                navigation bar the button <b><a href="/">"Add Funds"</a></b> to get more cash, or <b><a href="/">"Wallet"</a></b> to know how many Crypto you have already bought.
+            </p>
+        </footer>
+    </div>
+{% endblock %} 

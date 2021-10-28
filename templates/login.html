@@ -1,0 +1,31 @@
+{% extends "layout.html" %}  
+
+{% block title %} 
+    Log In 
+{% endblock %} 
+
+{% block main %} 
+    <div class="login-container">
+        <header>
+            <p class="logo-login">Welcome</p>
+        </header>
+        <div class="line-login"></div>
+        <form action="/login" method="post">
+            <div class="erro erro-login">
+                {{ error }}
+            </div>
+            <div class="form-container">
+                <p class="p-username">Username</p>
+                <div class="form-group username-input-div">
+                    <input class="username-input" autocomplete="off" autofocus class="form-c" name="username" placeholder="Username" type="text">
+                </div>
+                <p class="p-password">Password</p>
+                <div class="form-group password-input-div">
+                    <input class="password-input" autocomplete="off" autofocus class="form-c" name="password" placeholder="Password" type="password">
+                </div>
+                <button class="btn btn-login" type="submit">Sign In</button>
+                <p class="register-text">Haven't got an account yet? <a class="register-link" href="/register">Register here</a></p>
+            </div>
+        </form> 
+    </div>
+{% endblock %}
